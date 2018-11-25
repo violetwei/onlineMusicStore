@@ -1,4 +1,5 @@
-package assignment4;
+package a4;
+
 import java.util.ArrayList;
 /**
  * Class for testing your implementation of the HashTable class.
