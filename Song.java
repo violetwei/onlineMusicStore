@@ -1,4 +1,4 @@
-package assignment4;
+package a4;
 /**
  * This class represents a single song
  */
