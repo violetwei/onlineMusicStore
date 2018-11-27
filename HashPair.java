@@ -1,5 +1,3 @@
-package assignment4;
-
 public class HashPair<K,V> {
     private K key;
     private V value;
