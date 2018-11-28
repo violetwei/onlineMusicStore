@@ -1,7 +1,7 @@
 # onlineMusicStore
 simulate an online Music place in Java with HashTable
 
-The class MyHashTable has the following fields:
+#### The class MyHashTable has the following fields:
 
 • An int for the number of entries stored inside the table.
 
@@ -13,7 +13,7 @@ The class MyHashTable has the following fields:
 LinkedList of HashPairs.
 
 
-Implement the following public methods in the MyHashTable class:
+#### Implement the following public methods in the MyHashTable class:
 
 
 • The constructor MyHashTable() which takes an int as input representing the initial capacity of the table.1 Using the input, the constructor initializes all the fields.
