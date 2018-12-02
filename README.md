@@ -29,3 +29,8 @@ LinkedList of HashPairs.
 
 
 • A rehash() method which takes no input and modifies the table so that it contains double the number of buckets. This method should be O(n) where n the number of entries in the table.
+
+A keys() method which takes no input and returns an ArrayList containing all the keys in the table. The keys in the returned ArrayList may be in any order. This method should be O(n) where n the number of entries in the table.
+
+
+• A values() method which takes no input and returns an ArrayList containing all the unique values in the table. The returned ArrayList of unique values may be in any order. This method should be O(n) where n the number of entries in the table.
