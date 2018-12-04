@@ -34,3 +34,16 @@ A keys() method which takes no input and returns an ArrayList containing all the
 
 
 • A values() method which takes no input and returns an ArrayList containing all the unique values in the table. The returned ArrayList of unique values may be in any order. This method should be O(n) where n the number of entries in the table.
+
+
+Implement the following public methods inside the MusicStore class. Note that you are allowed to add as many private methods and attributes as you see fit.
+
+• The constructor MusicStore() which takes as input an ArrayList of Songs to initialize the MusicStore.
+
+• A method addSong() which takes a Song as input and adds it to the MusicStore. This method should be O(1).
+
+• A method searchByTitle() which takes a String as input and returns the Song with the provided title. If there are multiple songs with the same title, you may return any one of them. Note that the input should match exactly the Song title. This method should be O(1).
+
+• A method searchByArtist() which takes a String as input representing an artist and returns an ArrayList of Songs containing all the songs in the MusicStore performed by the given artist. The Songs in the returned ArrayList may be in any order. This method should be O(1).
+
+• A method searchByYear() which takes an Integer as input representing a year and returns an ArrayList of Songs containing all the songs in the MusicStore produced in the given year. The Songs in the returned ArrayList may be in any order. This method should be O(1)
