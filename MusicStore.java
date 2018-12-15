@@ -1,19 +1,18 @@
-package assignment4;
 
 import java.util.ArrayList;
 
 public class MusicStore {
-    //ADD YOUR CODE BELOW HERE
+    
 	
 	// create three hashMaps fields
     private MyHashTable<String,Song> titleTable = new MyHashTable<String,Song>(100); //song table
     private MyHashTable<String,ArrayList<Song>> artistTable = new MyHashTable<String,ArrayList<Song>>(100);
     private MyHashTable<Integer,ArrayList<Song>> yearTable = new MyHashTable<Integer,ArrayList<Song>>(100);
-    //ADD YOUR CODE ABOVE HERE
+    
     
     
     public MusicStore(ArrayList<Song> songs) {
-        //ADD YOUR CODE BELOW HERE
+       
     	
     	//initialize attributes
     	this.titleTable =  new MyHashTable<String,Song>(100);
@@ -63,7 +62,7 @@ public class MusicStore {
     			this.yearTable.get(year).add(song);
     		}
     	}
-        //ADD YOUR CODE ABOVE HERE
+        
     }
     
     
@@ -71,7 +70,6 @@ public class MusicStore {
      * Add Song s to this MusicStore
      */
     public void addSong(Song s) {
-        // ADD CODE BELOW HERE
     	
     	//add to titleTable
     	if(this.titleTable.get(s.getTitle()) == null) {
@@ -104,7 +102,6 @@ public class MusicStore {
 		}
 
 		
-        // ADD CODE ABOVE HERE
     }
     
     /**
@@ -112,12 +109,10 @@ public class MusicStore {
      * by that title 
      */
     public Song searchByTitle(String title) {
-        //ADD CODE BELOW HERE
     	
     	Song found = titleTable.get(title);
     	
         return found; //remove
-        //ADD CODE ABOVE HERE
     }
     
     /**
@@ -125,11 +120,11 @@ public class MusicStore {
      * ArrayList of all such Songs.
      */
     public ArrayList<Song> searchByArtist(String artist) {
-        //ADD CODE BELOW HERE
+	    
     	ArrayList<Song> found = artistTable.get(artist);
     	
         return found;//remove
-        //ADD CODE ABOVE HERE
+        
     }
     
     /**
@@ -137,11 +132,11 @@ public class MusicStore {
      *  and return an ArrayList of all such  Songs  
      */
     public ArrayList<Song> searchByYear(Integer year) {
-        //ADD CODE BELOW HERE
+        
     	ArrayList<Song> found = yearTable.get(year);
     	
         return found;//remove
-        //ADD CODE ABOVE HERE
+        
         
     }
 }
