@@ -1,10 +1,7 @@
-package assignment4;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
-
-
 
 public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
     // num of entries to the table
@@ -18,7 +15,6 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
     
     // constructor
     public MyHashTable(int initialCapacity) {
-        // ADD YOUR CODE BELOW THIS
     
         this.numBuckets=initialCapacity;
         this.numEntries = 0;
@@ -27,8 +23,6 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
         for(int i = 0; i < initialCapacity; i++) {
     			this.buckets.add(new LinkedList<HashPair<K,V>>());
         }
-    	
-        //ADD YOUR CODE ABOVE THIS
     }
     
     public int size() {
@@ -58,7 +52,6 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
      */
     public V put(K key, V value) {
 		
-        //  ADD YOUR CODE BELOW HERE
     	if(key == null){
 			throw new IllegalArgumentException();
 		}
@@ -92,7 +85,6 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
     			
     		}
     	
-    		//  ADD YOUR CODE ABOVE HERE
     }
     
     
@@ -101,7 +93,7 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
      */
     
     public V get(K key) {
-        //ADD YOUR CODE BELOW HERE
+        
     		if(key == null){
     			throw new IllegalArgumentException();
     		}
@@ -116,14 +108,14 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
         		}
         	}
          return null;//remove
-        //ADD YOUR CODE ABOVE HERE
+       
     }
     
     /**
      * Remove the HashPair correspoinding to key . Expected average runtime O(1) 
      */
     public V remove(K key) {
-        //ADD YOUR CODE BELOW HERE
+       
     	if(key == null){
 			throw new IllegalArgumentException();
 		}
@@ -142,7 +134,7 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
         		i++;
         	}  	
         return null;//remove
-        //ADD YOUR CODE ABOVE HERE
+        
     }
     
     // Method to double the size of the hashtable if load factor increases
@@ -150,7 +142,7 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
     // Made public for ease of testing.
     
     public void rehash() {
-        //ADD YOUR CODE BELOW HERE
+        
     
     		MyHashTable<K, V> table=new MyHashTable<K, V>(this.numBuckets*2);   		
     		for(LinkedList<HashPair<K,V>> list: this.buckets) 
@@ -163,7 +155,7 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
     		this.buckets=table.buckets;
     		this.numBuckets=table.numBuckets;
     	
-        //ADD YOUR CODE ABOVE HERE
+        
     }
     
     
@@ -172,7 +164,7 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
      */
     
     public ArrayList<K> keys() {
-        //ADD YOUR CODE BELOW HERE
+        
     	
     		if (this.numEntries==0) {
     			ArrayList<K> keys=new ArrayList<K>();
@@ -189,7 +181,7 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
         		}	
     		}   	
         return keys;
-        //ADD YOUR CODE ABOVE HERE
+        
     }
     
     /**
@@ -197,7 +189,7 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
      * Expected average runtime is O(n)
      */
     public ArrayList<V> values() {
-        //ADD CODE BELOW HERE
+       
     		MyHashTable<V, K> hashTable=new MyHashTable<V, K>(this.numBuckets);
     		for(LinkedList<HashPair<K,V>> list: this.buckets) 
     		{
@@ -216,7 +208,7 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
             	}	
         	}
     		return values;
-        //ADD CODE ABOVE HERE
+       
     }
     
     
@@ -230,7 +222,7 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
         private LinkedList<HashPair<K,V>> entries;
         
         private MyHashIterator() {
-            //ADD YOUR CODE BELOW HERE
+            
         	entries = new LinkedList<HashPair<K,V>>();
         	for(LinkedList<HashPair<K,V>> list: MyHashTable.this.getBuckets()) 
         	{
@@ -238,21 +230,21 @@ public class MyHashTable<K,V> implements Iterable<HashPair<K,V>>{
         			entries.add(item);
         		}
         	}
-            //ADD YOUR CODE ABOVE HERE
+            
         }
         
         @Override
         public boolean hasNext() {
-            //ADD YOUR CODE BELOW HERE
+            
             return (!entries.isEmpty());
-            //ADD YOUR CODE ABOVE HERE
+            
         }
         
         @Override
         public HashPair<K,V> next() {
-            //ADD YOUR CODE BELOW HERE
+		
         	return entries.removeFirst();
-            //ADD YOUR CODE ABOVE HERE
+           
         }
         
     }
