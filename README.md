@@ -36,7 +36,7 @@ A keys() method which takes no input and returns an ArrayList containing all the
 • A values() method which takes no input and returns an ArrayList containing all the unique values in the table. The returned ArrayList of unique values may be in any order. This method should be O(n) where n the number of entries in the table.
 
 
-#### Implement the following public methods inside the MusicStore class. Note that you are allowed to add as many private methods and attributes as you see fit.
+#### Implement the following public methods inside the MusicStore class. 
 
 • The constructor MusicStore() which takes as input an ArrayList of Songs to initialize the MusicStore.
 
